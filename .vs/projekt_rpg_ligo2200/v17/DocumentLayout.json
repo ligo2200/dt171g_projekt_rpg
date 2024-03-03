@@ -1,0 +1,105 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Linda\\webbutveckling\\\u00E5r2\\DT071G\\projekt\\projekt_rpg\\projekt_rpg_ligo2200\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A22A571E-99E2-4EA5-A04F-C86D95DD134E}|projekt_rpg_ligo2200\\projekt_rpg_ligo2200.csproj|c:\\linda\\webbutveckling\\\u00E5r2\\dt071g\\projekt\\projekt_rpg\\projekt_rpg_ligo2200\\projekt_rpg_ligo2200\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A22A571E-99E2-4EA5-A04F-C86D95DD134E}|projekt_rpg_ligo2200\\projekt_rpg_ligo2200.csproj|solutionrelative:projekt_rpg_ligo2200\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A22A571E-99E2-4EA5-A04F-C86D95DD134E}|projekt_rpg_ligo2200\\projekt_rpg_ligo2200.csproj|c:\\linda\\webbutveckling\\\u00E5r2\\dt071g\\projekt\\projekt_rpg\\projekt_rpg_ligo2200\\projekt_rpg_ligo2200\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A22A571E-99E2-4EA5-A04F-C86D95DD134E}|projekt_rpg_ligo2200\\projekt_rpg_ligo2200.csproj|solutionrelative:projekt_rpg_ligo2200\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A22A571E-99E2-4EA5-A04F-C86D95DD134E}|projekt_rpg_ligo2200\\projekt_rpg_ligo2200.csproj|c:\\linda\\webbutveckling\\\u00E5r2\\dt071g\\projekt\\projekt_rpg\\projekt_rpg_ligo2200\\projekt_rpg_ligo2200\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A22A571E-99E2-4EA5-A04F-C86D95DD134E}|projekt_rpg_ligo2200\\projekt_rpg_ligo2200.csproj|solutionrelative:projekt_rpg_ligo2200\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A22A571E-99E2-4EA5-A04F-C86D95DD134E}|projekt_rpg_ligo2200\\projekt_rpg_ligo2200.csproj|c:\\linda\\webbutveckling\\\u00E5r2\\dt071g\\projekt\\projekt_rpg\\projekt_rpg_ligo2200\\projekt_rpg_ligo2200\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A22A571E-99E2-4EA5-A04F-C86D95DD134E}|projekt_rpg_ligo2200\\projekt_rpg_ligo2200.csproj|solutionrelative:projekt_rpg_ligo2200\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A22A571E-99E2-4EA5-A04F-C86D95DD134E}|projekt_rpg_ligo2200\\projekt_rpg_ligo2200.csproj|c:\\linda\\webbutveckling\\\u00E5r2\\dt071g\\projekt\\projekt_rpg\\projekt_rpg_ligo2200\\projekt_rpg_ligo2200\\character.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A22A571E-99E2-4EA5-A04F-C86D95DD134E}|projekt_rpg_ligo2200\\projekt_rpg_ligo2200.csproj|solutionrelative:projekt_rpg_ligo2200\\character.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Enemy.cs",
+              "DocumentMoniker": "C:\\Linda\\webbutveckling\\\u00E5r2\\DT071G\\projekt\\projekt_rpg\\projekt_rpg_ligo2200\\projekt_rpg_ligo2200\\Enemy.cs",
+              "RelativeDocumentMoniker": "projekt_rpg_ligo2200\\Enemy.cs",
+              "ToolTip": "C:\\Linda\\webbutveckling\\\u00E5r2\\DT071G\\projekt\\projekt_rpg\\projekt_rpg_ligo2200\\projekt_rpg_ligo2200\\Enemy.cs",
+              "RelativeToolTip": "projekt_rpg_ligo2200\\Enemy.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACwAAABkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-14T15:06:28.076Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Player.cs",
+              "DocumentMoniker": "C:\\Linda\\webbutveckling\\\u00E5r2\\DT071G\\projekt\\projekt_rpg\\projekt_rpg_ligo2200\\projekt_rpg_ligo2200\\Player.cs",
+              "RelativeDocumentMoniker": "projekt_rpg_ligo2200\\Player.cs",
+              "ToolTip": "C:\\Linda\\webbutveckling\\\u00E5r2\\DT071G\\projekt\\projekt_rpg\\projekt_rpg_ligo2200\\projekt_rpg_ligo2200\\Player.cs",
+              "RelativeToolTip": "projekt_rpg_ligo2200\\Player.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-14T15:05:56.263Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Character.cs",
+              "DocumentMoniker": "C:\\Linda\\webbutveckling\\\u00E5r2\\DT071G\\projekt\\projekt_rpg\\projekt_rpg_ligo2200\\projekt_rpg_ligo2200\\Character.cs",
+              "RelativeDocumentMoniker": "projekt_rpg_ligo2200\\Character.cs",
+              "ToolTip": "C:\\Linda\\webbutveckling\\\u00E5r2\\DT071G\\projekt\\projekt_rpg\\projekt_rpg_ligo2200\\projekt_rpg_ligo2200\\Character.cs",
+              "RelativeToolTip": "projekt_rpg_ligo2200\\Character.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-14T15:04:55.869Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Game.cs",
+              "DocumentMoniker": "C:\\Linda\\webbutveckling\\\u00E5r2\\DT071G\\projekt\\projekt_rpg\\projekt_rpg_ligo2200\\projekt_rpg_ligo2200\\Game.cs",
+              "RelativeDocumentMoniker": "projekt_rpg_ligo2200\\Game.cs",
+              "ToolTip": "C:\\Linda\\webbutveckling\\\u00E5r2\\DT071G\\projekt\\projekt_rpg\\projekt_rpg_ligo2200\\projekt_rpg_ligo2200\\Game.cs",
+              "RelativeToolTip": "projekt_rpg_ligo2200\\Game.cs",
+              "ViewState": "AQIAAHAAAAAAAAAAAAAcwJ0AAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-14T13:32:35.796Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Linda\\webbutveckling\\\u00E5r2\\DT071G\\projekt\\projekt_rpg\\projekt_rpg_ligo2200\\projekt_rpg_ligo2200\\Program.cs",
+              "RelativeDocumentMoniker": "projekt_rpg_ligo2200\\Program.cs",
+              "ToolTip": "C:\\Linda\\webbutveckling\\\u00E5r2\\DT071G\\projekt\\projekt_rpg\\projekt_rpg_ligo2200\\projekt_rpg_ligo2200\\Program.cs",
+              "RelativeToolTip": "projekt_rpg_ligo2200\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-14T13:22:47.337Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
