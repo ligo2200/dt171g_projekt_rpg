@@ -9,11 +9,11 @@ namespace projekt_rpg_ligo2200
     {
         private Player player = new Player("", 100, 10);
         private Enemy enemy = new Enemy("", 0, 0);
-        private bool hasTreasure = false;
 
         public void Start()
         {
             Console.WriteLine("Nu börjar vi spelet.");
+            Console.WriteLine("");
 
             // Name-input from user
             Console.Write("Vad heter du? ");
@@ -21,10 +21,10 @@ namespace projekt_rpg_ligo2200
 
             // Create player
             player = new Player(playerName, 100, 10);
-            Console.Clear();
+            Console.Clear(); // clearing console from previous textmessages
             Console.WriteLine($"Hej {playerName}!");
             Console.WriteLine("Du står vid en vägskäl.");
-            Console.WriteLine("Antingen kan du gå vägen genom den mörka skogen till vänster eller ta vägen som leder till den hemtrevliga byn.");
+            Console.WriteLine("Antingen kan du gå vägen genom den mörka skogen till vänster eller ta vägen till höger som leder till byn.");
             Console.WriteLine("");
             Console.WriteLine("Vad vill du göra?");
 
@@ -34,7 +34,7 @@ namespace projekt_rpg_ligo2200
         }
 
         private void RoadChoice()
-        {
+        {   // alternative at crossroads
             Console.WriteLine("Välj ett av alternativen:");
             Console.WriteLine("1. Gå genom skogen");
             Console.WriteLine("2. Gå till byn");
@@ -56,9 +56,10 @@ namespace projekt_rpg_ligo2200
             }
         }
 
+        // if a player chose a wrong choice
         private void WrongChoice()
         {
-            Console.Clear();
+            Console.Clear(); // clearing console from previous textmessages
             Console.WriteLine("I det här spelet måste du vara modig om du vill vinna! Fegisar får börja om. :P");
             Console.WriteLine("");
             Console.WriteLine("Vad vill du göra?");
@@ -78,10 +79,12 @@ namespace projekt_rpg_ligo2200
             }
         }
 
+        // updating player health
         private void UpdatePlayerHealth()
         {
-            Console.WriteLine($"Din hälsa: {player.Health}");
+            Console.WriteLine($"Din hälsa är: {player.Health}");
 
+            // if player health is zero or less
             if (player.Health <= 0)
             {
                 Console.WriteLine("Oj då! Du har inget liv kvar, du är död! :(");
@@ -104,9 +107,10 @@ namespace projekt_rpg_ligo2200
             }
         }
 
+        // if player chose the "Gå genom skogen" option.
         private void ExploreForest()
         {
-            Console.Clear();
+            Console.Clear(); // clearing console from previous textmessages
             Console.WriteLine("Du ger dig ut på en vandring genom skogen.");
             Console.WriteLine("");
             Console.WriteLine("Plötsligt dyker ett skogsmonster upp!");
@@ -132,6 +136,7 @@ namespace projekt_rpg_ligo2200
             }
         }
 
+        // if player chose the "gå till byn" -option
         private void VisitVillage()
         {
             Console.Clear();
@@ -156,7 +161,7 @@ namespace projekt_rpg_ligo2200
                     VisitShop();
                     break;
                 case 3:
-                    RoadChoice(); // Go back to the road choice
+                    RoadChoice(); // Go back to the road choice in the beginning
                     break;
                 case 4:
                     EndGame();
@@ -164,6 +169,7 @@ namespace projekt_rpg_ligo2200
             }
         }
 
+        // if player chose "utforska byn" -option
         private void ExploreVillage()
         {
             Console.Clear();
@@ -191,16 +197,18 @@ namespace projekt_rpg_ligo2200
             }
         }
 
+        // if player chose "slåss mot zombies" -option
         private void FightZombies()
         {
             Console.Clear();
             Console.WriteLine("Du bestämmer dig för att slåss mot zombiesarna.");
 
-            // Create list with zombies
+            // Create list with zombies since there is more than one zombie
             List<Enemy> zombies = new List<Enemy>
             {
                 new Enemy("Zombie 1", 30, 20),
-                new Enemy("Zombie 2", 30, 20)
+                new Enemy("Zombie 2", 30, 20),
+                new Enemy("Zombie 3", 30, 20)
             };
             
             // calling method in Enemy-class
@@ -208,12 +216,8 @@ namespace projekt_rpg_ligo2200
            
             UpdatePlayerHealth();
 
-            if (player.Health <= 0)
-            {
-                Console.WriteLine("Din hälsa har sjunkit till 0. Spelet är över, du är tyvärr död.");
-                return;
-            }
 
+            // if player defeats all zombies
             if (playerWinsBattle)
             {
                 Console.WriteLine("");
@@ -222,7 +226,7 @@ namespace projekt_rpg_ligo2200
                 ExploreForest();
             }
             else
-            {
+            {   // if player doesn't defeat ALL zombies
                 Console.WriteLine("");
                 Console.WriteLine("Du springer tillbaka till vägskälet, tur att du lyckades smita iväg när zombiesarna började smaska på något annat.");
 
@@ -230,6 +234,7 @@ namespace projekt_rpg_ligo2200
             }
         }
 
+        // if player chose "besök affären" -option
         private void VisitShop()
         {
             Console.Clear();
@@ -242,11 +247,10 @@ namespace projekt_rpg_ligo2200
             ExploreVillage();
         }
 
-
+        // if player chose explore forest (gå genom skogen) and then fight enemy (slåss mot skogsmonstret)
         private void FightEnemy()
         {
             Console.Clear();
-            Console.WriteLine("Akta dig, nu attackerar skogsmonstret!");
             Console.WriteLine("");
             // Create enemy 
             enemy = new Enemy("Skogsmonstret", 40, 8);
@@ -254,14 +258,11 @@ namespace projekt_rpg_ligo2200
             // Check if player wins or loses in Enemy-class
             bool playerBattle = enemy.AttackPlayer(player);
 
+            // player health is updated
             UpdatePlayerHealth();
 
-            if (player.Health <= 0)
-            {
-                Console.WriteLine("Din hälsa har sjunkit till 0. Spelet är över, du är tyvärr död.");
-                return;
-            }
 
+            // if player wins
             if (playerBattle)
             {
                 Console.WriteLine("");
@@ -270,7 +271,7 @@ namespace projekt_rpg_ligo2200
 
                 LakeChoice();
             }
-            else
+            else // if player loses but still have health left
             {
                 Console.WriteLine("");
                 Console.WriteLine("Du linkar vidare genom skogen, benet gör ont, men du hade turen att skogsmonstret blev distraherad av något ljud så du kunde smita iväg.");
@@ -281,6 +282,7 @@ namespace projekt_rpg_ligo2200
 
         }
 
+        // after fighting monster player comes to this choice
         private void LakeChoice()
         {
             Console.WriteLine("Du kommer till en mörk sjö. Du kan välja att gå runt sjön eller spara tid genom att simma över, med risk för att stöta på något i vattnet.");
@@ -299,7 +301,7 @@ namespace projekt_rpg_ligo2200
                     GoAroundLake();
                     break;
                 case 2:
-                    player.HasTreasure = false;
+                    player.HasTreasure = false; // player doesn't have the treasure before going to swim across lake
                     SwimAcrossLake();
                     break;
                 case 3:
@@ -310,6 +312,7 @@ namespace projekt_rpg_ligo2200
             Console.Clear();
         }
 
+        // if player choses to "simma över sjön"
         private void SwimAcrossLake()
         {
             Console.Clear();
@@ -326,6 +329,7 @@ namespace projekt_rpg_ligo2200
 
         }
 
+        // if player choses to "gå runt sjön"
         private void GoAroundLake()
         {
             Console.Clear();
@@ -341,33 +345,39 @@ namespace projekt_rpg_ligo2200
             Console.WriteLine("3. Spring tillbaka till vägskälet och gå till byn istället!");
             Console.WriteLine("4. Avsluta spelet");
 
+            Console.WriteLine("");
+            Console.WriteLine("De där bina var inte roliga, nu är du full av röda och kliande bistick. :( ");
+            Console.WriteLine("");
+            // Player loses 20 in health
+            player.Health -= 20;
+            UpdatePlayerHealth();
+
+            Console.WriteLine("");
+
             int choice = GetPlayerChoice(1, 4);
             switch (choice)
             {
                 case 1:
-                    Console.WriteLine("Du valde att springa vidare framåt, in i skogen!");
+                    
                     ContinueIntoForest();
                     break;
                 case 2:
-                    player.HasTreasure = false;
-                    Console.WriteLine("Du valde att springa tillbaka och simma över sjön istället!");
+                    
+                    player.HasTreasure = false; // player doesn't have the treasure before going to swim across lake
                     SwimAcrossLake();
                     break;
-                case 3:
-                    Console.WriteLine("Du valde att springa tillbaka till vägskälet och gå till byn istället!");
+                case 3:                  
                     VisitVillage();
                     break;
                 case 4:
-                    Console.WriteLine("Du valde att avsluta spelet.");
+                    
                     EndGame();
                     return;
             }
 
-            // Player loses 20 in health
-            player.Health -= 20;
-            UpdatePlayerHealth();
         }
 
+        // player is sent to choice about forest
         private void ContinueIntoForest()
         {
             // next choice
@@ -394,15 +404,17 @@ namespace projekt_rpg_ligo2200
             }
         }
 
+        // if player chose "djupare in i skogen" -option
         private void ThePrincess()
         {
-            Console.Clear();
+            Console.Clear(); // clearing console of previous text
             // next choice
             Console.WriteLine("Plötsligt ser du en vacker prinsessa i den mörka skogen. Hon verkar leta efter något.");
             Console.WriteLine("");
             Console.WriteLine("Prinsessan vänder sig mot dig och säger: ");
             Console.WriteLine("Du där! Har du sett min skatt? Jag tappade den någonstans men jag vet inte exakt var.");
             Console.WriteLine("");
+            // player choices
             Console.WriteLine("Vad vill du göra?");
             Console.WriteLine("1. Se efter om du har skatten i väskan.");
             Console.WriteLine("2. Tala om för henne att du inte har skatten.");
@@ -412,11 +424,11 @@ namespace projekt_rpg_ligo2200
 
             switch (choice)
             {
-                case 1:
+                case 1: // if player has treasure
                     if (player.HasTreasure)
                     {
                         Console.Clear();
-                        Console.WriteLine("Kan det vara denna skatten som jag har i min väska? Jag hittade den i sjön.");
+                        Console.WriteLine("Du letar i väskan och tar fram skatten du hittade i sjön.");
                         Console.WriteLine("");
                         // player wins game, game finished.
                         Console.WriteLine("1. Ge skatten till prinsessan");
@@ -427,7 +439,7 @@ namespace projekt_rpg_ligo2200
 
                         switch (finishGame)
                         {
-                            case 1:
+                            case 1: // if player chose "ge skatten till prinsessan" - option
                                 Console.Clear();
                                 Console.WriteLine("Tack så mycket, utropar prinsessan glatt! ");
                                 Console.WriteLine("För din ärlighet och ditt mod ska du belönas med att få bo i mitt slott och äta glass varenda dag!");
@@ -450,7 +462,7 @@ namespace projekt_rpg_ligo2200
                                 }
 
                                 break;
-                            case 2:
+                            case 2: // if player chose "behålla skatten själv" -option
                                 Console.Clear();
                                 Console.WriteLine("Du behåller skatten för dig själv och går skrattande därifrån medan prinsessan förvånat stirrar på dig.");
                                 Console.WriteLine("");
@@ -477,10 +489,10 @@ namespace projekt_rpg_ligo2200
 
                     }
                     else
-                    {
+                    {   // if player doesn't have treasure in bag
                         Console.Clear();
-                        Console.WriteLine("Jag har tyvärr inte din skatt.");
-                        Console.WriteLine("Vilken otur svarar prinsessan. Du måste ge den till mig för att kunna vinna spelet.");
+                        Console.WriteLine("Du letar i väskan men det finns ingen skatt där.");
+                        Console.WriteLine("Du måste ge skatten till mig för att kunna vinna spelet säger prinsessan.");
                         Console.WriteLine("");
                         Console.WriteLine("Vad vill du göra?");
                         Console.WriteLine("1. Börja om spelet");
@@ -499,9 +511,9 @@ namespace projekt_rpg_ligo2200
                         }
                     }
                     break;
-                case 2:
+                case 2: // if player chose "jag har inte skatten" -option
                     Console.Clear();
-                    Console.WriteLine("Jag har tyvärr inte din skatt.");
+                    Console.WriteLine("Jag har tyvärr inte din skatt, säger du till prinsessan.");
                     Console.WriteLine("Vilken otur svarar prinsessan. Du måste ge den till mig för att kunna vinna spelet.");
                     Console.WriteLine("");
                     Console.WriteLine("Vad vill du göra?");
@@ -528,9 +540,10 @@ namespace projekt_rpg_ligo2200
 
         }
 
+        // 
         private void EndGame()
         {
-            Console.WriteLine("Tack för att du spelade! Hej då.");
+            Console.WriteLine("Tack för att du spelade! :) Hej då.");
         }
 
         // check and get which choice player chose.

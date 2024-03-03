@@ -12,3 +12,4 @@ C:\Linda\webbutveckling\år2\DT071G\projekt\projekt_rpg\projekt_rpg_ligo2200\pro
 C:\Linda\webbutveckling\år2\DT071G\projekt\projekt_rpg\projekt_rpg_ligo2200\projekt_rpg_ligo2200\bin\Debug\net8.0\projekt_rpg_ligo2200.pdb
 C:\Linda\webbutveckling\år2\DT071G\projekt\projekt_rpg\projekt_rpg_ligo2200\projekt_rpg_ligo2200\obj\Debug\net8.0\projekt_rpg_ligo2200.genruntimeconfig.cache
 C:\Linda\webbutveckling\år2\DT071G\projekt\projekt_rpg\projekt_rpg_ligo2200\projekt_rpg_ligo2200\obj\Debug\net8.0\ref\projekt_rpg_ligo2200.dll
+C:\Linda\webbutveckling\år2\DT071G\projekt\projekt_rpg\projekt_rpg_ligo2200\projekt_rpg_ligo2200\obj\Debug\net8.0\projekt_rpg_ligo2200.sourcelink.json

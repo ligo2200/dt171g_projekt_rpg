@@ -16,7 +16,5 @@ namespace projekt_rpg_ligo2200
             Health = health;
             Damage = damage;
         }
-
-        public bool IsAlive => Health > 0;
     }
 }
