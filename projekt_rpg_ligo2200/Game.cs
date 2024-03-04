@@ -19,18 +19,27 @@ namespace projekt_rpg_ligo2200
             Console.Write("Vad heter du? ");
             string playerName = Console.ReadLine().Trim();
 
-            // Create player
-            player = new Player(playerName, 100, 10);
-            Console.Clear(); // clearing console from previous textmessages
-            Console.WriteLine($"Hej {playerName}!");
-            Console.WriteLine("Du står vid en vägskäl.");
-            Console.WriteLine("Antingen kan du gå vägen genom den mörka skogen till vänster eller ta vägen till höger som leder till byn.");
-            Console.WriteLine("");
-            Console.WriteLine("Vad vill du göra?");
+            if (string.IsNullOrWhiteSpace(playerName))
+            {
+                Console.WriteLine("Du måste ange ett namn.");
+
+                Start();
+            }
+            else
+            {
+                // Create player
+                player = new Player(playerName, 100, 10);
+                Console.Clear(); // clearing console from previous textmessages
+                Console.WriteLine($"Hej {playerName}!");
+                Console.WriteLine("Du står vid en vägskäl.");
+                Console.WriteLine("Antingen kan du gå vägen genom den mörka skogen till vänster eller ta vägen till höger som leder till byn.");
+                Console.WriteLine("");
+                Console.WriteLine("Vad vill du göra?");
 
 
-            // Starting of main game events
-            RoadChoice();
+                // Starting of main game events
+                RoadChoice();
+            }
         }
 
         private void RoadChoice()
@@ -210,10 +219,10 @@ namespace projekt_rpg_ligo2200
                 new Enemy("Zombie 2", 30, 20),
                 new Enemy("Zombie 3", 30, 20)
             };
-            
+
             // calling method in Enemy-class
             bool playerWinsBattle = enemy.ZombieAttack(player, zombies);
-           
+
             UpdatePlayerHealth();
 
 
@@ -358,19 +367,19 @@ namespace projekt_rpg_ligo2200
             switch (choice)
             {
                 case 1:
-                    
+
                     ContinueIntoForest();
                     break;
                 case 2:
-                    
+
                     player.HasTreasure = false; // player doesn't have the treasure before going to swim across lake
                     SwimAcrossLake();
                     break;
-                case 3:                  
+                case 3:
                     VisitVillage();
                     break;
                 case 4:
-                    
+
                     EndGame();
                     return;
             }
