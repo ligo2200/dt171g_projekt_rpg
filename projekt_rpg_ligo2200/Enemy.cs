@@ -11,14 +11,19 @@ namespace projekt_rpg_ligo2200
         public bool AttackPlayer(Player player)
         {
             Console.WriteLine($"Du slåss mot {Name}!");
+
+            // instance of class random
             Random random = new Random();
+            // generating random number 0 or 1. If 0 then playerBattle gets value of true. Otherwise the value is false. 
             bool playerBattle = random.Next(2) == 0;
 
+            // if playerBattle value is true
             if (playerBattle)
             {
                 Console.WriteLine("");
                 Console.WriteLine($"Vilken tur, du lyckades besegra {Name}.");
             }
+            // if playerBattle is false
             else
             {
                 Console.WriteLine("");
@@ -28,6 +33,7 @@ namespace projekt_rpg_ligo2200
 
             return playerBattle;
         }
+
 
         public bool ZombieAttack(Player player, List<Enemy> zombies)
         {
@@ -43,9 +49,8 @@ namespace projekt_rpg_ligo2200
                 if (!randomOutcomeZombieBattle)
                 {
                     Console.WriteLine($"Åh nej! De var för många och du förlorade mot {zombie.Name}.");
-                    player.Health -= zombie.Damage; // Spelaren får skada
+                    player.Health -= zombie.Damage; // Player gets damage
                     playerBattleZombies = false;
-                    break;
                 }
 
             }

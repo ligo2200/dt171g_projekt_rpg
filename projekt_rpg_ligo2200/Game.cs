@@ -225,6 +225,11 @@ namespace projekt_rpg_ligo2200
 
             UpdatePlayerHealth();
 
+            if (player.Health <= 0)
+            { 
+                return; 
+            }
+
 
             // if player defeats all zombies
             if (playerWinsBattle)
@@ -235,7 +240,7 @@ namespace projekt_rpg_ligo2200
                 ExploreForest();
             }
             else
-            {   // if player doesn't defeat ALL zombies
+            {   // if player doesn't defeat all zombies
                 Console.WriteLine("");
                 Console.WriteLine("Du springer tillbaka till vägskälet, tur att du lyckades smita iväg när zombiesarna började smaska på något annat.");
 
@@ -270,6 +275,10 @@ namespace projekt_rpg_ligo2200
             // player health is updated
             UpdatePlayerHealth();
 
+            if (player.Health <= 0)
+            {
+                return;
+            }
 
             // if player wins
             if (playerBattle)
@@ -360,6 +369,12 @@ namespace projekt_rpg_ligo2200
             // Player loses 20 in health
             player.Health -= 20;
             UpdatePlayerHealth();
+
+            if (player.Health <= 0)
+            {
+                Console.WriteLine("Förbaskade bin.");
+                return;
+            }
 
             Console.WriteLine("");
 

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("projekt_rpg_ligo2200")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9dd3adc6a75464775984ba2659f6d26a30a7a21f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ef0662fd670b25476d1d198c6e609ebe878093f5")]
 [assembly: System.Reflection.AssemblyProductAttribute("projekt_rpg_ligo2200")]
 [assembly: System.Reflection.AssemblyTitleAttribute("projekt_rpg_ligo2200")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
